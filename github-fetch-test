@@ -1,0 +1,17 @@
+const myToken = '1818f1280552b30901066bbdc4f656b9393afb56'
+var repos = []
+
+function getRepos() {
+  fetch('https://api.github.com/users/shoppersaysBC/repos', {
+    method: 'get',
+    headers: {
+      Authorization: 'token ${myToken}'
+}
+  }).then(function(repoList) {
+    return response.json();
+  })
+  .then(function(repoList) {
+    console.log(JSON.stringify(repoList));
+    repos < JSON.stringify(repoList);
+  }
+)}
